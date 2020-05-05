@@ -1,10 +1,10 @@
-#Amazon Alexa Prototype
+# Amazon Alexa Prototype
 Chatbot and IoT control server prototype with Amazon Alexa prototype.
 
-##Summary
+## Summary
 
-##Dependency
+## Dependency
 
-##Info
+## Info
 
-##Release History
+## Release History
