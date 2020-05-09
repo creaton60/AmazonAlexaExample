@@ -32,6 +32,9 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+
+    // https://mvnrepository.com/artifact/com.amazon.alexa/ask-sdk
+    compile group: 'com.amazon.alexa', name: 'ask-sdk', version: '2.30.0'
 }
 
 test {
