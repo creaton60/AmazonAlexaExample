@@ -3,6 +3,8 @@ package net.broadp.alexa.intent;
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
+import net.broadp.alexa.common.BasicCard;
+import net.broadp.alexa.common.BasicResponse;
 
 import java.util.Optional;
 
@@ -16,10 +18,10 @@ public class FallbackIntentHandler implements RequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = "Sorry, I don't know that. You can say try saying help!";
+        String speechText = BasicResponse.FALLBACK.getMessage();
         return input.getResponseBuilder()
                 .withSpeech(speechText)
-                .withSimpleCard("HelloWorld", speechText)
+                .withSimpleCard(BasicCard.HELLO_WORLD.getCard(), speechText)
                 .withReprompt(speechText)
                 .build();
     }
