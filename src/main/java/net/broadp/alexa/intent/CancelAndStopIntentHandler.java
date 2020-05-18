@@ -3,6 +3,8 @@ package net.broadp.alexa.intent;
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
+import net.broadp.alexa.common.BasicCard;
+import net.broadp.alexa.common.BasicResponse;
 
 import java.util.Optional;
 
@@ -16,10 +18,10 @@ public class CancelAndStopIntentHandler implements RequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = "Goodbye";
+        String speechText = BasicResponse.CANCEL.getMessage();
         return input.getResponseBuilder()
                 .withSpeech(speechText)
-                .withSimpleCard("HelloWorld", speechText)
+                .withSimpleCard(BasicCard.HELLO_WORLD.getCard(), speechText)
                 .build();
     }
 }
